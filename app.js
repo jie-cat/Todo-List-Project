@@ -53,6 +53,16 @@ button.addEventListener("click", (e) => {
     // 設計移除時由大變小動畫
     todo.style.animation = "scaleDown 0.2s ease";
     addEventListener("animationend", () => {
+      // 移除localStorage的資料
+      let text = todo.children[0].innerText;
+      let myListArray = JSON.parse(localStorage.getItem("list"));
+      myListArray.forEach((item, index) => {
+        if (item.todoText == text) {
+          myListArray.splice(index, 1);
+          localStorage.setItem("list", JSON.stringify(myListArray));
+        }
+      });
+
       todo.remove();
     });
   });
@@ -120,6 +130,16 @@ if (myList !== null) {
       // 設計移除時由大變小動畫
       todo.style.animation = "scaleDown 0.2s ease";
       addEventListener("animationend", () => {
+        // 移除localStorage的資料
+        let text = todo.children[0].innerText;
+        let myListArray = JSON.parse(localStorage.getItem("list"));
+        myListArray.forEach((item, index) => {
+          if (item.todoText == text) {
+            myListArray.splice(index, 1);
+            localStorage.setItem("list", JSON.stringify(myListArray));
+          }
+        });
+
         todo.remove();
       });
     });
