@@ -67,7 +67,7 @@ section {
 }
 
 section div.todo {
-  width: 30vw;
+  width: 50vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,12 +75,12 @@ section div.todo {
 
 section div.todo p {
   background-color: #fff;
-  font-size: 2rem;
+  font-size: 1.75rem;
   padding: 0.25rem 0.75rem;
 }
 
 section div.todo p.todo-text {
-  width: 70%;
+  width: 50%;
   text-align: left;
 }
 
@@ -88,5 +88,26 @@ section div.todo p.todo-time {
   width: 30%;
   font-family: "Nanum Pen Script", cursive;
   text-align: center;
+}
+
+section div.todo button {
+  width: 10%;
+  border: none;
+  border-radius: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+section div.todo button.checkButton {
+  color: red;
+}
+
+section div.todo button.trashButton {
+  color: #217421;
+}
+
+.toggle {
+  -webkit-text-decoration: line-through 0.2rem;
+          text-decoration: line-through 0.2rem;
 }
 /*# sourceMappingURL=style.css.map */
