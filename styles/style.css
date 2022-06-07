@@ -71,6 +71,8 @@ section div.todo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-animation: scaleUp 0.2s ease;
+          animation: scaleUp 0.2s ease;
 }
 
 section div.todo p {
@@ -106,8 +108,52 @@ section div.todo button.trashButton {
   color: #217421;
 }
 
-.toggle {
+.done {
   -webkit-text-decoration: line-through 0.2rem;
           text-decoration: line-through 0.2rem;
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

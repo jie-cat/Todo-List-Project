@@ -39,11 +39,15 @@ button.addEventListener("click", (e) => {
   //設計按鈕劃刪除線功能
   checkButton.addEventListener("click", () => {
     // 如果沒有class:toggle就加進去 , 有就移除掉
-    todo.classList.toggle("toggle");
+    todo.classList.toggle("done");
   });
   // 設計按鈕移除功能
   trashButton.addEventListener("click", () => {
-    todo.remove();
+    // 設計移除時由大變小動畫
+    todo.style.animation = "scaleDown 0.2s ease";
+    addEventListener("animationend", () => {
+      todo.remove();
+    });
   });
 
   todo.appendChild(checkButton);
