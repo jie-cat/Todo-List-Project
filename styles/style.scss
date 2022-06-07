@@ -35,3 +35,29 @@ form {
     padding: 0.25rem 0.5rem;
   }
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  div.todo {
+    width: 30vw;
+    display: flex;
+    p {
+      background-color: #fff;
+      font-size: 2rem;
+      padding: 0.25rem 0.75rem;
+      // border: 1px solid blue;
+    }
+    p.todo-text {
+      width: 70%;
+      text-align: left;
+    }
+    p.todo-time {
+      width: 30%;
+      font-family: "Nanum Pen Script", cursive;
+      text-align: center;
+    }
+  }
+}
