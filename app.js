@@ -11,6 +11,13 @@ button.addEventListener("click", (e) => {
   let todoMonth = form.children[1].value;
   let todoDate = form.children[2].value;
 
+  // 如果輸入空的事項
+  if (todoText === "") {
+    alert("請輸入代辦事項!");
+    // 跳出事件處理器
+    return;
+  }
+
   /* 把輸入的資料加進<section></section> */
   let todo = document.createElement("div");
   todo.classList.add("todo");
