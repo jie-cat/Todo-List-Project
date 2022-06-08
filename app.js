@@ -86,6 +86,10 @@ button.addEventListener("click", (e) => {
     localStorage.setItem("list", JSON.stringify(myListArray));
   }
 
+  // 新增完項目後輸入欄內容會清除
+
+  e.target.parentElement.children[0].value = "";
+
   section.appendChild(todo);
 });
 
